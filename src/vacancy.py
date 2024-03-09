@@ -96,6 +96,7 @@ class VacancyHH(Vacancy):
         else:
             return int(self.salary_to) > int(other.salary_to)
 
+
     def __ge__(self, other):
         """Метод для сравнения экземпляров"""
         if self.salary_to != 0 and self.salary_from != 0:
