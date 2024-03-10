@@ -16,9 +16,9 @@ class HhAPI(GetAPI):
     """Класс для работы с API сайта hh, запрашивает вакансии по нужной профессии,
     для сохранения данных в json файл и дальнейшего взаимодействия с пользователем"""
 
-    def __init__(self, page=0, per_page=100):
+    def __init__(self,text, page=0, per_page=100):
 
-        self.text = 'NAME:python developer'
+        self.text = text
         self.page = page
         self.per_page = per_page
         # Справочник для параметров GET-запроса
