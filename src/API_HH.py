@@ -32,5 +32,6 @@ class HhAPI(GetAPI):
 
     def response(self):
         """Получение ответа с сервера"""
-        data = requests.get(self.url, self.params)
-        return data
+        response = requests.get(self.url, self.params)
+        response.raise_for_status()
+        return response
